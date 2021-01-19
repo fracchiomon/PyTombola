@@ -54,6 +54,7 @@ class Cartella:
 
     def genera_cartella(self):
         """ creazione della tupla della cartella elemento output = tupla cartella generata"""
+        """Thanks to GitHub user @francinicla for the original methods genera_cartella and his nice attempt with Python Tombola-Bingo"""
 
         num = Estrazioni()
         matrix = num.matrix(self.UPPER_BOUND - 1)
