@@ -176,7 +176,3 @@ class Cartella:
         print("\n\n")
         print(matrix)
 
-
-cosetto = Cartella()
-cosetto.genera_cartella()
-cosetto.stampa()
