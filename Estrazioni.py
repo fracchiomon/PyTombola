@@ -1,3 +1,5 @@
+"""Creation of the Estrazioni object, which will be used for number draws"""
+
 import numpy as np
 
 
