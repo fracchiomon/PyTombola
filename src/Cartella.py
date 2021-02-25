@@ -21,21 +21,6 @@ class Cartella:
     numeri_cartella = None
     rng = None
 
-    def get_cartella_number(self):
-        return self.id
-
-    def get_ROWS(self):
-        return self.ROWS
-
-    def get_COLUMNS(self):
-        return self.COLUMNS
-
-    def get_numeri_cartella(self):
-        return self.numeri_cartella
-
-    def set_numeri_cartella(self, matrice):
-        self.numeri_cartella = np.array(matrice, dtype=int)
-
     def __init__(self):
         # start random number generation
         self.rng = np.random.default_rng()
@@ -51,6 +36,23 @@ class Cartella:
         # self.riga2 = (sorted(numbers[9:18]))    #altrimenti le tre ROWS sono oggetti List
         # self.riga3 = (sorted(numbers[18:27]))
         # coso = '[]'
+
+    def get_cartella_number(self):
+        return self.id
+
+    def get_ROWS(self):
+        return self.ROWS
+
+    def get_COLUMNS(self):
+        return self.COLUMNS
+
+    def get_numeri_cartella(self):
+        return self.numeri_cartella
+
+    def set_numeri_cartella(self, matrice):
+        self.numeri_cartella = np.array(matrice, dtype=int)
+
+
 
     def genera_cartella(self):
         """ creazione della tupla della cartella elemento output = tupla cartella generata"""
@@ -106,7 +108,7 @@ class Cartella:
                 decrease = scelto - 1
                 cmatrice[decrease] = ' '
                 np.sort(row)
-            
+
 
         """Generazione COLUMNS in ordine crescente"""
 
@@ -121,9 +123,9 @@ class Cartella:
                             primo.append([y, x])
 
             else:
-                for y in range(1, self.ROWS+1):
-                    for x in range(1, self.COLUMNS+1):
-                        if tupla_cartella[y][x] >= (10 * m) and tupla_cartella[y][x] <= (9 + (10 * m)):
+                for y in range(0, self.ROWS):
+                    for x in range(0, self.COLUMNS):
+                        if tupla_cartella[y][x] >= (10 * m) and tupla_cartella[y][x] <= (9 + (10 * m )):
                             trovati += 1
                             primo.append([y, x])
 
@@ -171,8 +173,7 @@ class Cartella:
 
     def stampa(self):
         matrix = self.get_numeri_cartella()
-        
+
         print(self.get_cartella_number())
         print("\n\n")
         print(matrix)
-
