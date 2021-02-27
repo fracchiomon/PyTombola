@@ -1,4 +1,4 @@
-"""each Card contains 15 numbers (3 ROWS, 5 numbers per line)
+"""each Tombola Card contains 15 numbers (3 ROWS, 5 numbers per line)
 the 5 numbers on each row must be in ascending order
 a number cannot appear more than once per card
 all numbers from 1 to 90 must be used with the same frequency
