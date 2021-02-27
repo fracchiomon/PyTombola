@@ -1,11 +1,11 @@
-"""Creation of the Estrazioni object, which will be used for number draws"""
+"""Creation of the Draws object, which will be used for number draws"""
 
 import numpy as np
 
 
-class Estrazioni(object):
-    numbers_to_draw = None  # numeri da pescare successivamente
-    numbers_drawed = None  # numeri già pescati
+class Draws(object):
+    numbers_to_draw = None  # numbers to draws next
+    numbers_drawed = None  # numbers already drawn
     value = 0
 
     def __init__(self):
@@ -35,7 +35,7 @@ class Estrazioni(object):
 
 
     def draw(self):
-        """Gestione estrazioni"""
+        """Gestione Draws"""
         to_draw = self.get_numbers_to_draw()
         drawed = self.get_numbers_drawed()
 

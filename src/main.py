@@ -1,21 +1,20 @@
-import numpy as np
 import sys
-from Cartella import *
-from Estrazioni import *
+from Card import *
+from Draws import *
 
 def menu():
-    print("Cosa fare?\n")
-    print("1: Genera Cartella\n2: Stampa Cartella\n3: Esci\n\n")
+    print("What do you want to do?\n")
+    print("1: Generate a Card\n2: Print the Card\n3: Exit\n\n")
     choice = input()
     return int(choice)
 
 if __name__ == '__main__':
-    cartella_prova = Cartella()
+    test_card = Card()
     while (True):
         choice = menu()
         if (choice == 1):
-            cartella_prova.genera_cartella()
+            test_card.generate_card()
         elif (choice == 2):
-            cartella_prova.stampa()
+            test_card.print_card()
         elif (choice == 3):
             sys.exit()
