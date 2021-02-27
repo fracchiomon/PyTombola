@@ -35,7 +35,7 @@ class Draws(object):
 
 
     def draw(self):
-        """Gestione Draws"""
+        """Draws managing"""
         to_draw = self.get_numbers_to_draw()
         drawed = self.get_numbers_drawed()
 

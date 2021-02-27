@@ -114,7 +114,7 @@ class Card:
                 cmatrix[decrease] = ' '
                 np.sort(row)
 
-        """Generazione COLUMNS in ordine crescente"""
+        """COLUMNS generation in Increasing Order"""
 
         for m in range(1,9):
             supp_list = []
